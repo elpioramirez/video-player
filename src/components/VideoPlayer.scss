@@ -1,0 +1,22 @@
+.video-container{
+  position: relative;
+  overflow: hidden;
+}
+.video-player {
+  border: 1px solid #eee;
+  width: 100%;
+}
+.video-container > .video-nav-bar {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.video-container:hover > .video-nav-bar {
+  visibility: visible;
+  opacity: 1;
+  backgroundColor: "red";
+}
