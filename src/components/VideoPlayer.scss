@@ -1,22 +1,32 @@
 .video-container{
   position: relative;
   overflow: hidden;
-}
-.video-player {
-  border: 1px solid #eee;
-  width: 100%;
-}
-.video-container > .video-nav-bar {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-.video-container:hover > .video-nav-bar {
-  visibility: visible;
-  opacity: 1;
-  backgroundColor: "red";
+  max-width: 75vw;
+  &:hover {
+    > .video-nav-bar {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  > .video-nav-bar {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  > .video-player {
+    border: 1px solid #eee;
+    width: 100%;
+  }
+  > .video-icon-button {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }

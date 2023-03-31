@@ -1,1 +1,4 @@
 node_modules
+.idea
+.codesandbox
+package-lock.json

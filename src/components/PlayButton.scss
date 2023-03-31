@@ -1,0 +1,17 @@
+.play-button{
+  opacity: 1;
+  margin: 0.25rem 0.5rem;
+  >.triangle {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.7rem solid white;
+    border-bottom: 0.5rem solid transparent;
+  }
+  &:hover {
+    > .triangle{
+      border-left-color: #0865FF;
+    }
+  }
+}
+

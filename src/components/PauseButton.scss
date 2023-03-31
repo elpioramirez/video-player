@@ -1,11 +1,19 @@
-.line {
-  position: absolute;
-  left: 43.18%;
-  right: -3.18%;
-  top: 20%;
-  bottom: 65.39%;
+.pause-button{
+  opacity: 1;
+  z-index: 2000;
+  >.line {
 
-  /* 0865FF */
-  background: #0865FF;
-  transform: rotate(90deg);
+    width: 0.25rem;
+    height: 0.75rem;
+    margin: 0.25rem 0.12rem 0.25rem 0.12rem;
+    background-color: white;
+
+    /* 0865FF */
+  }
+  &:hover {
+    > .line{
+      background-color: #0865FF;
+    }
+  }
 }
+

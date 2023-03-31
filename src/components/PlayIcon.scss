@@ -1,0 +1,62 @@
+.something {
+  /* Icon / Play */
+
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 1369px;
+  top: 657px;
+
+
+
+  /* Circle */
+
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 67.17%;
+  right: 27.92%;
+  top: 49.81%;
+  bottom: 42.61%;
+
+  background: rgba(0, 0, 0, 0.5);
+  /* FFFFFF */
+  border: 2px solid #FFFFFF;
+
+
+  /* Icon / Play */
+
+  position: absolute;
+  left: 68.06%;
+  right: 28.75%;
+  top: 51.18%;
+  bottom: 43.9%;
+
+
+
+  /* BG */
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  /* 000000 */
+  background: #000000;
+  opacity: 0;
+
+
+  /* Play */
+
+  position: absolute;
+  left: 80%;
+  right: -44.33%;
+  top: 17.83%;
+  bottom: 28.59%;
+
+  /* FFFFFF */
+  background: #FFFFFF;
+  transform: rotate(90deg);
+
+}

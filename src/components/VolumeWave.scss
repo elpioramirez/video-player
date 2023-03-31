@@ -1,0 +1,21 @@
+.volume-wave-container{
+  > .circle{
+    display: flex;
+    flex-direction: row;
+    >.arc{
+      position: absolute;
+      border-radius: 50%;
+      border-color: transparent white transparent transparent;
+      transform: translate(-50%, -50%) ;
+      border-width: 0.18rem;
+    }
+  }
+  > .silence{
+    position: absolute;
+    width: 0.2rem;
+    height: 1.25rem;
+    color: white;
+    background-color: white;
+    transform: translate(-50%, -50%) rotate(45deg) ;
+  }
+}
