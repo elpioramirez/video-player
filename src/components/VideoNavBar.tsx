@@ -1,8 +1,8 @@
 import {FC, CSSProperties, useMemo} from "react";
 import { Box } from "@chakra-ui/react";
-import { PauseButton } from "./PauseButton";
-import { PlayButton } from "./PlayButton";
-import {VolumeButton} from "./VolumeButton";
+import { PauseButton } from "./Icons/PauseButton";
+import { PlayButton } from "./Icons/PlayButton";
+import {VolumeButton} from "./Icons/VolumeButton";
 import {IDuration} from "./VideoPlayer";
 
 const VideoNavBarStyle: CSSProperties = {

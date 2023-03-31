@@ -3,8 +3,8 @@ import {Box, Button} from "@chakra-ui/react";
 import { VideoNavBar } from "./VideoNavBar";
 
 import "./VideoPlayer.scss";
-import {PlayIcon} from "./PlayIcon";
-import {ReplayIcon} from "./ReplayIcon";
+import {PlayIcon} from "./Icons/PlayIcon";
+import {ReplayIcon} from "./Icons/ReplayIcon";
 
 
 interface VideoPlayerProps{
