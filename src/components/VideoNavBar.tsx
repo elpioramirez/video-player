@@ -50,7 +50,7 @@ interface VideoNavBarProps {
 export const VideoNavBar: FC<VideoNavBarProps> = ({ duration, togglePlay, isPlaying, progress, setVolume, volume }) => {
 
     const currentProgress: number = useMemo(()=>{
-        return (progress.decimal / duration.decimal) * 100 ?? 0;
+        return (progress.decimal / duration.decimal) * 100 || 0;
     },[progress, duration])
     return (
         <Box style={VideoNavBarStyle}>

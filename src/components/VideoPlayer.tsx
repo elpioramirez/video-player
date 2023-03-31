@@ -34,16 +34,17 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({source}) => {
   const [volume, setVolume] = useState(1);
   const videoRef = useRef<HTMLVideoElement>();
 
-  const togglePlay = useCallback(() => {
+  const togglePlay = () => {
     if(videoRef.current){
-      if (isPlaying) {
+      if (!videoRef.current.paused) {
         videoRef.current.pause();
+        setIsPlaying(false);
       } else {
         videoRef.current.play();
+        setIsPlaying(true);
       }
-      setIsPlaying(!isPlaying);
     }
-  },[videoRef.current]);
+  }
 
   useEffect(()=>{
     if(videoRef.current){
@@ -69,6 +70,12 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({source}) => {
   const isFinished = useMemo(()=>{
     return duration.decimal === progress.decimal;
   },[duration, progress]);
+
+  useEffect(()=>{
+    if(isFinished){
+      setIsPlaying(false);
+    }
+  },[isFinished]);
 
   const handleProgress = useCallback(() => {
     if(videoRef.current){
@@ -100,8 +107,8 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({source}) => {
 
   const handleReplay = useCallback(()=>{
     if(videoRef.current){
-      videoRef.current.currentTime = 0;
-      videoRef.current.play()
+      videoRef.current.load();
+      setIsPlaying(true);
     }
   },[videoRef.current])
 
@@ -113,7 +120,7 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({source}) => {
         className="video-player"
         onTimeUpdate={handleProgress}
         ref={videoRef as LegacyRef<HTMLVideoElement> }
-        autoPlay={false}
+        autoPlay={true}
       >
         <source
           src={source}
